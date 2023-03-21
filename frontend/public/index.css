@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+}
+
+/* ################################################ */
+/* CONTAINER & CARDS */
+.container {
+  max-width: 1270px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.container > .card-wide {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 4px solid rgba(190, 58, 58, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(141, 141, 141, 0.3);
+  animation: fade-in-down 1s ease 1s forwards;
+}
+
+.card-wide > .card-wide-title > .title {
+  font-size: 2.5rem;
+  color: #2c2c2c;
+  text-align: center;
+}
+
+.card-wide > .card-wide-title > .subtitle {
+  font-size: 1.5rem;
+  color: #434343;
+  text-align: center;
+}
+
+.card-wide > .card-wide-subtitle {
+  font-size: 1rem;
+  color: #434343;
+  text-align: center;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  animation: fade-in 1s ease 2s forwards;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(141, 141, 141, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #5a5a5a;
+}
+
+/* ################################################ */
+/* ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fade-in 0.5s ease 1.5s forwards;
+}
+
+.fade-in-down {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fade-in-down 0.5s ease 1s forwards;
+}
+
+.fade-in-down-nav {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fade-in-down 0.5s ease 0.5s forwards;
+}
+
+.fade-in-square.first {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: fade-in-square 1.5s ease-out 2s forwards;
+}
+
+.fade-in-square.second {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: fade-in-square 1.5s ease-out 2s forwards;
+}
+
+.fade-in-square.third {
+  opacity: 0;
+  transform: translateX(10px);
+  animation: fade-in-square 1.5s ease-out 2s forwards;
+}
+
+/* ################################################ */
+/* NAV */
+nav {
+  position: relative;
+  max-width: 1270px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto;
+  padding: 40px 60px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: 2px solid rgba(250, 230, 230, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+nav > div > a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2c2c2c;
+}
+
+nav > div {
+  display: flex;
+  gap: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+nav > div > li > a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #2c2c2c;
+}
+
+/* ################################################ */
+/* SQUARES DECORATIONS */
+.square-decoration {
+  width: 100px;
+  height: 100px;
+  background-color: #722a2a;
+  position: absolute;
+  z-index: -1000;
+}
+
+.square-decoration.first {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 333px;
+  top: 28px;
+}
+
+.square-decoration.second {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 263px;
+  top: 127px;
+}
+
+.square-decoration.third {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  left: 333px;
+  top: 197px;
+}
+
+/* ################################################ */
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  margin-top: 200px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+footer h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+footer a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* ################################################ */
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-square {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ################################################ */
+
+@media (min-width: 1270px) {
+  .container {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  nav > div > li > a {
+    display: none;
+  }
+}
+
+@media (max-width: 1269px) {
+  .container {
+    margin: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  .title,
+  .card-wide > .card-wide-title > .title {
+    font-size: 2rem;
+  }
+
+  .subtitle,
+  .card-wide > .card-wide-title > .subtitle {
+    font-size: 1rem;
+  }
+
+  .card-wide > .card-wide-subtitle {
+    font-size: 0.9rem;
+  }
+
+  nav {
+    margin: 0 20px;
+  }
+}
