@@ -9,7 +9,8 @@ app.use(express.static(path.join(__dirname, '../frontend/public')));
 app.use('/users', users)
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+    // res.sendFile(path.join(__dirname, '../frontend/index.html'));
+    res.send("App Running")
 })
 
 const port = process.env.PORT || 3000;
