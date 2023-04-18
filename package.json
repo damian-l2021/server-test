@@ -2,7 +2,7 @@
   "name": "server-test",
   "version": "1.0.0",
   "description": "test",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon ./server/index.js",
     "start": "node ./server/index.js"
